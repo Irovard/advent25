@@ -69,8 +69,8 @@ function openDoor(day) {
     
     // Update the door appearance
     const doorElement = document.querySelector(`.calendar-door:nth-child(${day})`);
-    doorElement.classList.remove('milestone', 'memory', 'surprise', 'special');
-    doorElement.classList.add('opened');
+    doorElement.classList.remove('milestone', 'memory', 'surprise');
+    doorElement.classList.add('opened', 'special');
     
     // Add celebration effect
     createCelebrationEffect();
@@ -83,6 +83,7 @@ function showDoorContent(day) {
         <div class="modal-icon">${doorData.icon}</div>
         <h2 class="modal-title">${doorData.title}</h2>
         <p class="modal-message">${doorData.message}</p>
+        ${day === 24 ? '<img src="pictures/tree.png" alt="Christmas Tree" style="max-width: 100%; height: auto; margin: 1rem 0; border-radius: 8px;">' : ''}
         ${day === 24 ? '<div style="font-size: 2rem; margin-top: 1rem;">🎄❤️🎅💕👼</div>' : ''}
     `;
     
