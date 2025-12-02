@@ -133,6 +133,12 @@ body {
     opacity: 0.7;
 }
 
+.calendar-door.opened.special {
+    background: linear-gradient(145deg, #dc2626, #b91c1c) !important;
+    box-shadow: 0 12px 40px rgba(220, 38, 38, 0.8);
+    animation: special-glow 2s ease-in-out infinite alternate;
+}
+
 .door-content {
     display: flex;
     flex-direction: column;
